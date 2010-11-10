@@ -67,7 +67,7 @@ module ActiveStylesheets
   # Example of use:
   #   explorer_stylesheet_name  
 	def stylesheet_exists( file_name )
-	  File.exists? "#{RAILS_ROOT}/public/stylesheets/#{file_name.to_s}.css"
+	  File.exists? "#{::Rails.root.to_s}/public/stylesheets/#{file_name.to_s}.css"
 	end
 
 end
