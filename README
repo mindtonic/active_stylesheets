@@ -1,5 +1,7 @@
 = active_stylesheets
 
+Inspired by / Created from Patrick Espake's stylesheet_by_browser plugin.  The functionality for active_stylesheets was created for use on Creative Allies - http://creativeallies.com
+
 Ruby on Rails helper that will insert stylesheets according to the browser, controller name and action name.
 
 This plugin will automatically create stylesheets for all of the major browsers including chrome, firefox, three versions of explorer, opera and safari.  You can use these stylesheets to make specific styling changes necessary to perfect your presentation in each browser.
