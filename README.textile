@@ -37,6 +37,10 @@ Loading the signup page (users_controller#new) will automatically include two st
 </code>
 </pre>
 
+h3. Rails 3 Default Stylesheet Inclusion Support
+
+Because the new version of Rails automagically includes all of the stylesheets in the root of your stylesheet folder, active_stylesheets houses the browser specific version of your stylesheet in the /browser folder inside of stylesheets. *If you happen to have a controller called the browser_controller, this could cause a conflict!*
+
 h3. Internet Explorer Version Support
 
 This plugin will respond to Internet Explorer by including a stylesheet specific to the version of Explorer that the request originates from and by including a universal Explorer stylesheet.  For example, if the request comes from Internet Explorer 6 (poor user doesn't know any better) then both ie6.css and ie.css will be included in the application header.  Explorer versions 6, 7 and 8 are supported.
