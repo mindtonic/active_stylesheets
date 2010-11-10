@@ -56,6 +56,6 @@ module ActiveStylesheetsHelper
     end    
     
     result.join('
-')
+').html_safe
   end
 end

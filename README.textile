@@ -4,7 +4,9 @@ Ruby on Rails helper that will insert stylesheets according to the browser, cont
 
 This plugin will automatically create stylesheets for all of the major browsers including chrome, firefox, three versions of explorer, opera and safari.  You can use these stylesheets to make specific styling changes necessary to perfect your presentation in each browser.
 
-This plugin will also look for and include stylesheets based on the current controller name and current action name. 
+This plugin will also look for and include stylesheets based on the current controller name and current action name.
+
+*This plugin makes use of many of the great features in Rails 3. Functionality in older versions of Rails is not guaranteed!* 
 
 h3. Active Controller and Action stylesheet support
 
@@ -53,13 +55,7 @@ h2. Installation
 
 h3. Step 1
 
-<pre>
-<code>
-./script/plugin install git@github.com:mindtonic/active_stylesheets.git
-</code>
-</pre>
-
-or for Rails 3
+For Rails 3
 
 <pre>
 <code>

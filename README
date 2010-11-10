@@ -49,10 +49,6 @@ This plugin also contains a file checking method to insure that a stylesheet exi
 
 === Step 1
 
-./script/plugin install git@github.com:mindtonic/active_stylesheets.git
- 
-or for Rails 3
-
 rails plugin install git@github.com:mindtonic/active_stylesheets.git
 
 === Step 2
