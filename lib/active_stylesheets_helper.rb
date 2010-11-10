@@ -47,12 +47,12 @@ module ActiveStylesheetsHelper
   	
 		# Add Browser Specific Stylesheet
     unless user_agent_name.nil?
-      result << stylesheet_link_tag("browser/#{user_agent_name.to_s}", options) if stylesheet_exists("browser/#{user_agent_name.to_s}")
+      result << stylesheet_link_tag("browsers/#{user_agent_name.to_s}", options) if stylesheet_exists("browsers/#{user_agent_name.to_s}")
     end
    	
    	# If Explorer, return Universal Explorer Stylesheet
-    if is_explorer? and stylesheet_exists("browser/#{explore_stylesheet_name.to_s}")
-    	result << stylesheet_link_tag("browser/#{explore_stylesheet_name.to_s}", options) 
+    if is_explorer? and stylesheet_exists("browsers/#{explore_stylesheet_name.to_s}")
+    	result << stylesheet_link_tag("browsers/#{explore_stylesheet_name.to_s}", options) 
     end    
     
     result.join('
