@@ -1,0 +1,96 @@
+= active_stylesheets
+
+Ruby on Rails helper that will insert stylesheets according to the browser, controller name and action name.
+
+This plugin will automatically create stylesheets for all of the major browsers including chrome, firefox, three versions of explorer, opera and safari.  You can use these stylesheets to make specific styling changes necessary to perfect your presentation in each browser.
+
+This plugin will also look for and include stylesheets based on the current controller name and current action name.
+
+=== Active Controller and Action stylesheet support
+
+This plugin was designed for a large, very design heavy site that I was working on.  I needed very specific styles for each controller action.  To do this in a traditional way yielded an insanely large and unmanageable stylesheet.  I designed this plugin to augment the traditional rails stylesheet methods and provide a convention for creating action specific stylesheets.
+
+The plugin will read your current controller name and action, and then look in the stylesheets folder to see if a stylesheet specific to either the controller as a whole or the current action exists.
+
+Arrange your stylesheets folder much as you would your views folders.
+
+/stylesheets
+    application.css
+    /controller_name
+        controller_name.css
+        action_name.css
+        
+An example for the Users controller (perhaps you have a really fancy signup page):
+
+/stylesheets
+    application.css
+    /users
+        users.css  <-- applies to all actions of the UsersController
+        new.css    <-- applies to users_controller#new
+
+Loading the signup page (users_controller#new) will automatically include two stylesheets if they exist:
+
+<link href="/stylesheets/users/users.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/users/new.css" media="screen" rel="stylesheet" type="text/css" />
+
+=== Internet Explorer Version Support
+
+This plugin will respond to Internet Explorer by including a stylesheet specific to the version of Explorer that the request originates from and by including a universal Explorer stylesheet.  For example, if the request comes from Internet Explorer 6 (poor user doesn't know any better) then both ie6.css and ie.css will be included in the application header.  Explorer versions 6, 7 and 8 are supported.
+
+=== Stylesheet File Checking
+
+This plugin also contains a file checking method to insure that a stylesheet exists in the public/stylesheets folder before it includes it in the head output.  This helps to insure that the browser will validate, links will not be included if they are broken and allows you to remove unnecessary files from the stylesheets folder to keep things tidy. 
+
+== Installation
+
+=== Step 1
+
+./script/plugin install git@github.com:mindtonic/active_stylesheets.git
+ 
+or for Rails 3
+
+rails plugin install git@github.com:mindtonic/active_stylesheets.git
+
+=== Step 2
+
+Then install the necessary files into your public directory by running
+
+rake active_stylesheets:install
+
+The files will be added in the directory public/stylesheets: 
+  - chrome.css
+  - firefox.css
+  - ie6.css
+  - ie7.css
+  - ie8.css
+  - ie.css
+  - opera.css
+  - safari.css
+
+=== Step 3
+
+Lastly, add the following line to the head element of your application view:
+
+<%= active_stylesheets %>
+
+Now you’re all set!
+
+== Example
+
+<%= active_stylesheets %>
+
+<%= active_stylesheets :media => "all" %>
+
+<%= active_stylesheets :media => "print" %>
+
+<%= active_stylesheets :media => "screen" %>
+
+== Uninstall
+
+rake active_stylesheets:uninstall
+
+Copyright (c) 2010 Jay Sanders, released under the MIT license
+
+Site: http://mindtonic.net
+Blog: http://blog.mindtonic.net
+Email: mailto:mindtonic@gmail.com
