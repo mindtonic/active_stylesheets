@@ -1,6 +1,6 @@
 # Active Stylesheets
 #
-# Author:: Jay Sanders (mailto:patrickespake@gmail.com)
+# Author:: Jay Sanders (mailto:mindtonic@gmail.com)
 # Copyright:: Copyright (c) 2010
 # License:: MIT
 #

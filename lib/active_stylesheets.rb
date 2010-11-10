@@ -1,7 +1,7 @@
 # Delivers a Stylesheet to the Browser based on the current
 # Controller and Action
 #
-# Author:: Jay Sanders (mailto:patrickespake@gmail.com)
+# Author:: Jay Sanders (mailto:mindtonic@gmail.com)
 # Copyright:: Copyright (c) 2010
 # License:: MIT
 #
