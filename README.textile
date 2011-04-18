@@ -133,7 +133,7 @@ rake active_stylesheets:uninstall
 
 rake active_stylesheets:uninstall
 
-Copyright (c) 2010 Jay Sanders, released under the MIT license
+Copyright (c) 2011 Jay Sanders, released under the MIT license
 
 Site: http://mindtonic.net
 Blog: http://blog.mindtonic.net
