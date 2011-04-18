@@ -51,8 +51,8 @@ module ActiveStylesheetsHelper
     end
    	
    	# If Explorer, return Universal Explorer Stylesheet
-    if is_explorer? and stylesheet_exists("browsers/#{explore_stylesheet_name.to_s}")
-    	result << stylesheet_link_tag("browsers/#{explore_stylesheet_name.to_s}", options) 
+    if is_explorer? and stylesheet_exists("browsers/#{explorer_stylesheet_name.to_s}")
+    	result << stylesheet_link_tag("browsers/#{explorer_stylesheet_name.to_s}", options) 
     end    
     
     result.join('
